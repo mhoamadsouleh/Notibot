@@ -1,0 +1,8 @@
+services:
+  - type: worker
+    name: telegram-upload-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python3 main.py
+    autoDeploy: true
